@@ -1,0 +1,121 @@
+/* Fuente personalizada */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura */
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Flexbox para la disposición */
+.container {
+  display: flex;
+  justify-content: center; /* Centrar las cajas horizontalmente */
+  align-items: flex-start; /* Alinear las cajas al principio */
+  gap: 1rem; /* Separación uniforme entre cajas */
+  flex-wrap: wrap; /* Permitir que las cajas se ajusten a nuevas filas */
+  padding: 1.5rem;
+  flex-grow: 1; /* Ocupar el espacio restante del body */
+}
+
+.box {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 300px; /* Mantener un tamaño fijo */
+  margin: 0; /* Eliminar márgenes adicionales */
+}
+
+/* Imagen dentro de la caja */
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Efecto hover en las cajas */
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  position: relative; /* Mantener en el flujo normal para pantallas pequeñas */
+  bottom: 0;
+  margin-top: auto; /* Mover el footer al final del contenido */
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#box2 {
+  animation: slideIn 2s ease-in-out;
+}
+
+/* Responsividad para dispositivos pequeñas */
+@media (max-width: 768px) {
+  .container {
+    justify-content: center; /* Centrar las cajas */
+    gap: 1rem; /* Mantener espacio entre filas y columnas */
+  }
+
+  .box {
+    width: 100%; /* Cada caja ocupa todo el ancho disponible */
+    max-width: 90%; /* Ajustar tamaño máximo */
+  }
+}
+
+/* Responsividad para dispositivos medianos */
+@media (max-width: 1024px) {
+  .container {
+    justify-content: space-evenly; /* Espaciar uniformemente las cajas */
+  }
+
+  .box {
+    width: 300px; /* Mantener tamaño fijo */
+  }
+}
+
+/* Responsividad para pantallas grandes (máximo 1920px) */
+@media (max-width: 1920px) {
+  .container {
+    max-width: 1400px; /* Limitar el ancho total del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la pantalla */
+    gap: 2rem; /* Incrementar la separación entre las cajas */
+  }
+
+  .box {
+    width: 350px; /* Aumentar el tamaño de las cajas */
+  }
+}
+
