@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  list-style: none;
+  list-style: none; 
 }
 
 html {
@@ -35,14 +35,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.logo {
-  color: #f9fafc;
-  font-size: 25px;
-  font-weight: 800;
-  max-width: 100px;
-  height: auto;
 }
 
 .menu {
@@ -159,7 +151,7 @@ body {
 
 .txt-p {
   font-size: 16px;
-  color: rgb(240, 6, 6);
+  color: rgb(235, 227, 227);
   margin-bottom: 35px;
 }
 
@@ -188,8 +180,8 @@ body {
 }
 
 .services {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 10)),
-    url(imagenes/fondo.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://res.cloudinary.com/dhdiwg1jh/image/upload/v1729028248/fondo_c4zga7.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
