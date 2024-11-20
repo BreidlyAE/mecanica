@@ -1,0 +1,122 @@
+/* Estilo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #fff; /* Título en blanco */
+  margin-bottom: 50PX;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Estilos para la sección de repuestos */
+.repuestos {
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.repuestos-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable según el tamaño */
+  gap: 20px;
+}
+
+.repuestos-1 div {
+  background-color: #1a1a1a; /* Fondo oscuro para las tarjetas */
+  border: 1px solid #333; /* Borde más oscuro */
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.repuestos-1 div:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra blanca al pasar el mouse */
+}
+
+/* Estilos para imágenes */
+.repuestos-1 img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  object-fit: cover; /* Asegura que las imágenes se ajusten sin deformarse */
+  border: 2px solid #333; /* Borde para mayor contraste */
+}
+
+/* Estilos para los títulos */
+.repuestos-1 h3 {
+  font-size: 1.2rem;
+  color: #fff; /* Texto en blanco */
+  margin-bottom: 10px;
+}
+
+/* Estilos para los precios */
+.repuestos-1 p {
+  background-color: #333; /* Fondo oscuro para los precios */
+  color: #22c55e; /* Texto verde brillante */
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .repuestos-1 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .repuestos-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .repuestos-1 img {
+    max-width: 150px;
+  }
+}
+
+/* Animación al cargar */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Aparece desde abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su lugar */
+  }
+}
+
+/* Aplicar animación a las tarjetas */
+.repuestos-1 div {
+  background-color: #1a1a1a; /* Fondo oscuro para las tarjetas */
+  border: 1px solid #333; /* Borde más oscuro */
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
+  animation: fadeInUp 0.8s ease; /* Animación al cargar */
+}
+
+/* Hover mejorado */
+.repuestos-1 div:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3); /* Sombra más pronunciada */
+}
