@@ -1,0 +1,362 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilos del carrusel */
+.carrusel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    animation: cambio 25s infinite;
+}
+
+.carrusel-imagenes img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animación del carrusel */
+@keyframes cambio {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Estilos del contenedor del formulario */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    margin-top: 80px; /* Espaciado adicional para separar del header */
+}
+
+/* Título animado */
+.animated-title {
+    display: inline-block;
+    animation: scale-animation 5.5s infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes scale-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos de los títulos y campos de formulario */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Eliminar el botón largo que cambia de color */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    animation: none; /* Se elimina la animación */
+}
+
+/* Remover animación de cambio de colores */
+button:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+button:active {
+    transform: none;
+    box-shadow: none;
+}
+
+.loading-message {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 10px;
+}
+
+.loading-message.active {
+    display: block;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #007BFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsivos */
+
+/* Cel */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-container {
+        padding: 15px;
+        max-width: 90%;
+        margin-top: 100px; /* Aumentar espacio si es necesario */
+    }
+
+    .animated-title {
+        font-size: 22px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    /* Modificación del carrusel en pantallas pequeñas */
+    .carrusel-imagenes {
+        display: none;
+    }
+
+    .carrusel {
+        background-image: url('../imagenes/repuestos3.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
+/* Tablet */
+@media (max-width: 1024px) {
+    .form-container {
+        max-width: 80%;
+    }
+
+    .animated-title {
+        font-size: 26px;
+    }
+
+    input, textarea, button {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+
+/* Pantalla */
+@media (min-width: 1025px) {
+    .form-container {
+        max-width: 500px;
+    }
+
+    .animated-title {
+        font-size: 28px;
+    }
+
+    input, textarea, button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nave ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nave ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nave ul li a:hover {
+    color: #f39c12;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content .link {
+    flex: 1 1 200px;
+    text-align: left;
+}
+
+.footer-content .link h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-content .link ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content .link ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-content .link ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content .link ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #f39c12;
+}
