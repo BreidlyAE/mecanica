@@ -1,89 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="CSS/tienda.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu container">
+        <nav class="nave">
+          <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="tienda.html">TIENDA</a></li>
+            <li><a href="promociones.html">PROMOCIONES</a></li>
+            <li><a href="contactanos.html">CONTACTANOS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <section id="repuestos." class="repuestos container">
-        <h2>REPUESTOS</h2>
-        <div class="repuestos-1">
-          <div>
-            <img src="imagenes/re1.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re2.png" alt="" />
-            <h3>bujia</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re3.png" alt="" />
-            <h3>suspencion</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re4.png" alt="" />
-            <h3>disco</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re6.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re5.jpg" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re1.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re1.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re2.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re1.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
-          <div>
-            <img src="imagenes/re1.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>   
-          <div>
-            <img src="imagenes/re2.png" alt="" />
-            <h3>Filtro de aceite</h3>
-            <p>Este filtro de aceite es ideal para mantener el motor limpio y prolongar su vida útil.</p>
-            <p>S/.10.00</p>
-          </div>
+    <header>
+      <div class="filters">
+        <h3>Filtros</h3>
+        <label for="category">Categoría:</label>
+        <select id="category">
+          <option value="all">Todas</option>
+          <option value="sunglasses">LUBRICANTES</option>
+          <option value="accessories">LLANTAS</option>
+        </select>
+
+        <label for="price">Rango de precio:</label>
+        <input type="text" id="price" placeholder="50 A 100" />
+
+        <label for="brand">Marca:</label>
+        <input type="text" id="brand" placeholder="TOYOTA" />
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="BUSCAR REPUESTOS..." />
+        <button>🔍</button>
+        <div class="cart">
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png"
+            alt="Carrito"
+          />
+          <span>1</span>
         </div>
-      </section>
-</body>
+      </div>
+    </header>
+
+    <section class="product-grid">
+      <div class="product">
+        <img src="imagenes/re1.png" alt="Producto 1" />
+        <h3>FILTRO DE ACEITE</h3>
+        <p >
+          Es el encargado de obstruir todas las impurezas y partículas que puedan desgastar las piezas del motor
+        </p>
+        <br />
+        <p>S/ 955</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+      <div class="product">
+        <img src="imagenes/re2.png" alt="Producto 2" />
+        <h3>BUJIA</h3>
+        <p >
+          La bujía produce una chispa en la cámara de combustión 
+          que inflama la mezcla de combustible y aire,
+           lo que permite que el motor se encienda y funcione.
+        </p>
+        <br />
+        <p>S/ 955</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+      <div class="product">
+        <img src="imagenes/re3.png" alt="Producto 3" />
+        <h3>SUSPENCION</h3>
+        <p >
+          La suspensión es el sistema que conecta el chasis del vehículo con las ruedas
+        </p>
+        <br />
+        <p>S/ 955</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+      <div class="product">
+        <img src="imagenes/re4.png" alt="Producto 4" />
+        <h3>DISCO DE FRENO</h3>
+        <p >
+          Un componente del sistema de frenado que reduce la velocidad de las ruedas y detiene el vehículo
+        </p>
+        <br />
+        <p>S/ 955</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+      <div class="product">
+        <img src="imagenes/re5.jpg" alt="Producto 1" />
+        <h3>ACEITE</h3>
+        <p >
+          El aceite de motor es un elemento indispensable para el buen
+           funcionamiento de cualquier vehículo motorizado con motor de combustión
+        </p>
+        <br />
+        <p>S/ 955</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+      <div class="product">
+        <img src="imagenes/re6.png" alt="Producto 2" />
+        <h3>DESAFLOJADOR</h3>
+        <p >
+          Tiene una mezcla especial de solventes, tensoactivos, penetrantes y emulsionantes diseñados para aflojar y 
+          disolver rápida y efectivamente la grasa, el aceite y la mugre acumulada en los motores
+        </p>
+        <br />
+        <p>S/ 955</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+  
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content container">
+        <div class="link">
+          <h3>Sobre nosotros:</h3>
+          <ul>
+            <li>
+              <a href="#"
+                >Si necesitas más detalles
+                <br />
+                o tienes alguna otra solicitud, no
+                <br />
+                dudes en preguntar.
+                <br />
+                ¡Estoy aquí para ayudarte
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="link">
+          <h3>Contacto:</h3>
+          <ul>
+            <li><a href="#">Celular : 918377736</a></li>
+            <li><a href="#">Correo Electronico : josemotors@gmail.com</a></li>
+            <li><a href="#">Telefono: 232-2333</a></li>
+            <li><a href="#">Fax: 99854455</a></li>
+          </ul>
+        </div>
+        <div class="link">
+          <h3>Dirección:</h3>
+          <ul>
+            <li><a href="#">Jr. utp 284 - Ofic. 103</a></li>
+            <li><a href="#">la molina</a></li>
+            <li><a href="#">lima, peru</a></li>
+          </ul>
+        </div>
+        <div class="link">
+          <h3>Ayuda al cliente:</h3>
+          <ul>
+            <li><a href="#">campañas</a></li>
+            <li><a href="#">politicas de privacidad</a></li>
+            <li><a href="#">politica</a></li>
+            <li><a href="#">politicas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-icons">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="whatsapp" target="_blank"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
 </html>
