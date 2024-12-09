@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("https://res.cloudinary.com/dhdiwg1jh/image/upload/v1729028248/fondo_c4zga7.jpg");
+	font-family: "Poppins", sans-serif;
+	width: 100%;
+	height: 100vh;
+}
+
+
+
+/* Menú */
+.menu {
+    position: relative; /* Cambiado para centrar el menú más fácilmente */
+    top: 10px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenedor del menú */
+
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+.menu .nave {
+    display: flex;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente dentro del fondo negro */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.menu .nave ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px; /* Espaciado entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.menu .nave ul li {
+    list-style: none;
+}
+
+.menu .nave ul li a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px; /* Espaciado interno para los enlaces */
+    transition: color 0.3s ease;
+}
+
+.menu .nave ul li a:hover {
+    color: #f2a365; /* Cambia de color al pasar el mouse */
+}
+
+.menu .nave ul li a::before,
+.menu .nave ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.menu .nave ul li a::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu .nave ul li a::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.menu .nave ul li a:hover::before,
+.menu .nave ul li a:hover::after {
+    width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu .nave ul {
+        flex-wrap: wrap; /* Los enlaces se adaptan en varias filas */
+    }
+}
+
+
+
+/* Flexbox para la disposición */
+.container {
+    display: flex;
+    justify-content: center; /* Centrar las cajas horizontalmente */
+    align-items: flex-start; /* Alinear las cajas al principio */
+    gap: 2rem; /* Separación uniforme entre cajas */
+    flex-wrap: wrap; /* Permitir que las cajas se ajusten a nuevas filas */
+    padding: 1.5rem;
+    flex-grow: 1; /* Ocupar el espacio restante del body */
+  }
+  
+  .box {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 300px; /* Mantener un tamaño fijo */
+    margin: 0; /* Eliminar márgenes adicionales */
+  }
+  
+  /* Imagen dentro de la caja */
+  .box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Efecto hover en las cajas */
+  .box:hover {
+    transform: scale(1.1);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+/*fuuter*/
+.footer {
+    padding: 40px 0;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center; /* Centra el texto dentro del footer */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    text-align: left; /* Textos alineados a la izquierda por columna */
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #f9fafc;
+    margin-bottom: 15px;
+    text-align: center; /* Opcional, para centrar títulos */
+}
+
+.link a {
+    font-size: 16px;
+    color: #c5c5c5;
+    display: block;
+    margin-bottom: 15px;
+    text-align: center; /* Opcional, para centrar los enlaces */
+}
+
+.footer-icons {
+    text-align: center; /* Asegura que los íconos estén centrados */
+    padding: 20px;
+}
+
+.footer-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 24px;
+}
+
+.footer-icons a:hover {
+    color: #db2c09;
+}
+
+.fa-facebook-f {
+    color: blue;
+}
+
+.fa-twitter {
+    color: cyan;
+}
+
+.fa-instagram {
+    color: pink;
+}
+
+.fa-whatsapp {
+    color: green;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+}
