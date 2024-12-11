@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTANOS POR SU PROBLEMA</title>
+    <link href="CSS/for_imagen.css" rel="stylesheet" type="text/css"/>
+    <link href="CSS/formulario.css" rel="stylesheet" type="text/css"/>
+    <script src="JS/confirmacion.js" defer></script>
+    <script src="JS/carga_envio.js" defer></script>
+</head>
+<body>
+    <div class="carrusel">
+        <div class="carrusel-imagenes">
+            <img src="imagenes/repuestos.jpg" alt="repuestos en tienda"/>
+            <img src="imagenes/repuestos2.jpg" alt="imagen de repuestos 2"/>
+            <img src="imagenes/repuestos_1.jpg" alt="imagen de repuestos 3"/>
+        </div>
+    </div>    
+    <div class="form-container">
+        <form id="contact-form" action="#" class="form">
+            <h2 class="animated-title">CONTACTAR POR SU PROBLEMA O DUDA</h2>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" placeholder="DNI" required maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 8);">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+            <label for="message">Consulta o duda:</label>
+            <textarea id="message" name="message" placeholder="Escribe tu consulta o duda aquí" required></textarea>
+
+            <!-- Mensaje de carga -->
+            <div id="loadingMessage" class="loading-message" style="display:none;">Enviando...</div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="JS/formulario.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro por Rango de Precios</title>
+    <script>
+        function filtrarPrecio() {
+            let precioMax = document.getElementById("precio").value;
+            let productos = document.querySelectorAll(".producto");
+
+            productos.forEach(function(producto) {
+                let precio = parseFloat(producto.getAttribute("data-precio"));
+                if (precio <= precioMax) {
+                    producto.style.display = "";
+                } else {
+                    producto.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <label for="precio">Precio máximo:</label>
+    <input type="range" id="precio" min="0" max="1000" step="10" oninput="filtrarPrecio()" value="500">
+    <span id="valorPrecio">500</span>
+
+    <div class="producto" data-precio="450">
+        <h2>Producto 1 - $450</h2>
+    </div>
+    <div class="producto" data-precio="800">
+        <h2>Producto 2 - $800</h2>
+    </div>
+    <div class="producto" data-precio="250">
+        <h2>Producto 3 - $250</h2>
+    </div>
+    <div class="producto" data-precio="200">
+        <h2>buzo 1 - $450</h2>
+        
+        <button>Agregar al Carro</button>
+        
+        <img src="imagenes/TI6.png"  />
+    </div>
+    <div class="Producto" data-precio="200">
+        <h2>Producto 4 - $500</h2>
+        <img src="imagenes/TI6.png"  />
+        <p >
+          Buzo Valvula Para Mitsubishi Lancer 2.0 4g63-t Cp9a Evo 1999
+        <br />
+        <p>S/ 100</p>
+        <br />
+        <button>Agregar al Carro</button>
+      </div>
+</body>
+</html>
